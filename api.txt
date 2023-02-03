@@ -1,0 +1,16 @@
+--- GPS ---
+
+POST /api/GPS/ [{time: '2021-02-05 14:23:00', device: 2, location: '23.56256, 115.246252'}, {...}] OR {...}
+
+
+--- AUDIO ---
+
+POST /api/audio/  {date: '2021-04-06', time: '15:36:44', device: 2, audioPath: '...'}
+
+PUT /api/audio/ {date: '2021-04-06', id: 578, level: 56.735, class: 1}
+    Response: Unanalyzed audio files [{date: '2021-04-06', id: 580, device: 3, audioPath: '...'}, {...}]
+
+
+--- VIDEO ---
+
+PUT /api/video/ [{device: 3, normal: true}] Every n seconds

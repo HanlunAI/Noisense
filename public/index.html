@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Noisense</title>
+<link rel=preload href=basic.css as=style onload=this.rel='stylesheet'>
+<script src=basic.js></script>
+<script src=socket.io.min.js></script>
+<script src=socket.js></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src=dashboard.js></script>
+<script src=dashboard-component.js></script>
+
+<section id=stream>
+    <div id=videos></div>
+</section>
+
+<section id=device>
+    <device-status role=h2></device-status>
+</section>
+
+<input type=checkbox id=popup>
+<label for=popup>
+    <table></table>
+</div>

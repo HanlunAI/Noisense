@@ -1,0 +1,208 @@
+:host(:not([hidden])) {
+    display:block;
+    background:white;
+    margin-top:1em;
+    padding:1em 0;
+}
+section {
+    display:none;
+}
+input[name=section]:nth-of-type(1):checked~section:nth-of-type(1),
+input[name=section]:nth-of-type(2):checked~section:nth-of-type(2),
+input[name=section]:nth-of-type(3):checked~section:nth-of-type(3) {
+    display:block;
+}
+gauge-meter {
+    margin-bottom:.5em;
+}
+menu {
+    display:flex;justify-content:space-evenly;
+}
+menu li {
+    width:2em;height:2em;
+    text-align:center;line-height:2em;
+    border-radius:9em;
+    font-size:1.25em;
+    background: silver;
+}
+section {
+    margin-top:1em;
+}
+iframe,table,video {
+    width:100%;
+    margin:.5em 0 0 0;
+}
+iframe+*,table+*,video+* {
+    margin-top:2em;
+}
+span.input {
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:.9em;
+    margin:.2rem .4rem;
+    color:gray;
+}
+figure {
+    overflow-x:scroll;overflow-y: hidden;
+    margin:0;
+}
+figcaption {
+    width:100%;height:30px;
+    position:relative;
+    padding-top:.5em;
+}
+figcaption>* {
+    position:absolute;
+    transform:translate(-50%,0);
+    font-size:.8em;
+}
+figcaption>*::before {
+    content:'🔺';
+    font-size:.5em;
+    position:absolute;left:50%;bottom:100%;
+    transform:translate(-50%,0);
+}
+iframe {
+    height:15em;
+    border:none;
+}
+.normal {
+    background:hsl(120,80%,80%);
+}
+.warning {
+    background:hsl(50,80%,80%);
+}
+h5 {
+    display:block;
+    height:2em;line-height:2em;
+    text-align:left;
+    padding:0 .4rem;
+    background:linear-gradient(to right,powderblue,lightcyan);
+}
+h5 time {
+    margin-left:.5em;
+    font-size:.85em;
+    color:gray;
+}
+input[type=number] {
+    width:2.5em;
+    margin:0 .3em;
+}
+input[type=date] {
+    margin-left:.5em;
+    background:transparent;
+    border:.05em solid;
+}
+path:not([stroke]) {
+    stroke:black;
+}
+line:not([stroke]) {
+    stroke:grey;
+    stroke-dasharray:2 2;
+}
+line:not([fill]),path:not([fill]) {
+    fill:none;
+}
+text {
+    font-size:.8em;
+    fill:grey;
+    dominant-baseline:central;
+    text-anchor:middle;
+}
+
+table {
+    border-collapse:collapse;
+}
+tbody {
+    font-size:.85em;
+}
+tr {
+    height:1.5em;
+}
+th {
+    border-top:.2em double gray;border-bottom:.2em double gray;
+    white-space:nowrap;
+    font-size:.9em;
+}
+td {
+    padding:0 .2em;
+}
+td:first-child,th:first-child {
+    padding-left:.5em;
+}
+td:last-child,th:last-child {
+    padding-right:.5em;
+}
+#audio td:nth-child(-n+3) {
+    width:1%;
+}
+#period {
+    display:grid;grid-template:2em 2em / repeat(4,1fr);
+    font-size:.9em;
+    margin:.3em auto;
+}
+#period>* {
+    justify-self: center;align-self: center;;
+}
+#period label {
+    display:inline-block;
+    width:4.5em;
+    padding:.2em 0;
+    border-radius:9em;
+    background:lightcyan;
+}
+#period label:not([for]) {
+    background:lemonchiffon;
+}
+#period input:checked+label {
+    background:darkturquoise;
+    color:white;
+}
+#period span {
+    grid-area:2 / 3;
+    justify-self: end;
+}
+#period #rolling:checked+label {
+    flex-direction: row;
+}
+#period #rolling:checked+label::before {
+    background: darkturquoise;
+}
+#period #rolling+label {
+    display:inline-flex;align-items:center;flex-direction:row-reverse;
+    background:lightcyan;
+    grid-area:2 / 4;
+}
+#period #rolling+label::before {
+    content:'';
+    display:block;
+    min-width:1em;height:1em;
+    margin:0 .3em;
+    border-radius:9em;
+    background:silver;
+}
+#period #rolling+label::after {
+    content:'A';
+    color:transparent;
+}
+#video ol {
+    display:flex;flex-wrap:wrap;justify-content:center;
+    padding:.5em;
+}
+#video ol li {
+    background:silver;
+    padding: .25em .5em;margin:.5em .5em 1em .5em;
+    border-radius: 9em;
+    position:relative;
+}
+#video ol li[title]::after {
+    content:attr(title) ' dB';
+    position:absolute;right:0;top:105%;
+    font-size:.9em;color:gray;
+}
+
+span button {
+    border-radius:9em;background:paleturquoise;
+    max-width:1.5em;min-width:1.5em;
+    max-height:1.5em;min-height:1.5em;
+    vertical-align:middle;    
+}
